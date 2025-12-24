@@ -148,8 +148,33 @@ export function Footer() {
             <p className="text-center md:text-left">
               With Respect & Gratitude, We Conclude
             </p>
-            <p className="flex items-center gap-1 text-center md:text-right">
-              Made with <Heart className="h-4 w-4 text-red-400 fill-red-400" /> by Majid Hameed & Syed Liyaqat
+            <p className="flex items-center gap-2 text-center md:text-right flex-wrap justify-center md:justify-end">
+              Made with <Heart className="h-4 w-4 text-red-400 fill-red-400 animate-pulse" /> by 
+              <span className="inline-flex items-center gap-1">
+                Majid Hameed
+                <a 
+                  href="https://linkedin.com/in/majidhameed" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform"
+                  aria-label="Majid Hameed LinkedIn"
+                >
+                  <Linkedin className="h-4 w-4 text-[#0A66C2] hover:text-[#0A66C2]" />
+                </a>
+              </span>
+              <span>&</span>
+              <span className="inline-flex items-center gap-1">
+                Syed Liyaqat
+                <a 
+                  href="https://linkedin.com/in/syedliyaqat" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 transition-transform"
+                  aria-label="Syed Liyaqat LinkedIn"
+                >
+                  <Linkedin className="h-4 w-4 text-[#0A66C2] hover:text-[#0A66C2]" />
+                </a>
+              </span>
             </p>
           </div>
           <p className="text-center text-xs text-primary-foreground/50 mt-4">
