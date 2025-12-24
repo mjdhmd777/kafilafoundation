@@ -1,18 +1,18 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
-import focusEducation from "@/assets/focus-education.jpg";
-import focusSports from "@/assets/focus-sports.jpg";
-import focusHealth from "@/assets/focus-health.jpg";
-import focusEnvironment from "@/assets/focus-environment.jpg";
-import focusAwareness from "@/assets/focus-awareness.jpg";
-import heroEducation from "@/assets/hero-education.jpg";
+import galleryCricketTrophy from "@/assets/gallery-cricket-trophy.jpg";
+import galleryDrugFreeRally from "@/assets/gallery-drug-free-rally.jpg";
+import galleryStudentsSession from "@/assets/gallery-students-session.jpg";
+import galleryPlantationDrive from "@/assets/gallery-plantation-drive.jpg";
+import galleryPrizeCeremony from "@/assets/gallery-prize-ceremony.jpg";
+import galleryYouthCricket from "@/assets/gallery-youth-cricket.jpg";
 
 const images = [
-  { src: heroEducation, alt: "Children learning" },
-  { src: focusEducation, alt: "Classroom session" },
-  { src: focusSports, alt: "Sports training" },
-  { src: focusHealth, alt: "Health camp" },
-  { src: focusEnvironment, alt: "Tree plantation" },
-  { src: focusAwareness, alt: "Community awareness" },
+  { src: galleryDrugFreeRally, alt: "Drug free Kashmir awareness rally" },
+  { src: galleryCricketTrophy, alt: "Cricket tournament trophy ceremony" },
+  { src: galleryStudentsSession, alt: "Addressing students at Tangdhar & Titwal" },
+  { src: galleryPlantationDrive, alt: "Plantation drive initiative" },
+  { src: galleryPrizeCeremony, alt: "Prize distribution ceremony" },
+  { src: galleryYouthCricket, alt: "Youth cricket team" },
 ];
 
 export function GalleryPreview() {

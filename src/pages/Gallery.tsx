@@ -9,13 +9,33 @@ import focusEnvironment from "@/assets/focus-environment.jpg";
 import focusAwareness from "@/assets/focus-awareness.jpg";
 import heroEducation from "@/assets/hero-education.jpg";
 import heroEnvironment from "@/assets/hero-environment.jpg";
+import galleryCricketTrophy from "@/assets/gallery-cricket-trophy.jpg";
+import galleryCovidAwareness from "@/assets/gallery-covid-awareness.jpg";
+import galleryCommunityTalk from "@/assets/gallery-community-talk.jpg";
+import galleryYouthCricket from "@/assets/gallery-youth-cricket.jpg";
+import galleryDrugFreeRally from "@/assets/gallery-drug-free-rally.jpg";
+import galleryPrizeCeremony from "@/assets/gallery-prize-ceremony.jpg";
+import galleryPlantationDrive from "@/assets/gallery-plantation-drive.jpg";
+import galleryVolunteers from "@/assets/gallery-volunteers.jpg";
+import galleryYouthGroup from "@/assets/gallery-youth-group.jpg";
+import galleryStudentsSession from "@/assets/gallery-students-session.jpg";
 
 const images = [
   { src: heroEducation, alt: "Education program" },
+  { src: galleryCricketTrophy, alt: "Cricket tournament trophy ceremony" },
+  { src: galleryDrugFreeRally, alt: "Drug free Kashmir awareness rally" },
   { src: focusEducation, alt: "Classroom learning" },
+  { src: galleryStudentsSession, alt: "Addressing students at Tangdhar & Titwal" },
+  { src: galleryYouthCricket, alt: "Youth cricket team" },
   { src: focusSports, alt: "Sports training" },
+  { src: galleryPrizeCeremony, alt: "Prize distribution ceremony" },
+  { src: galleryPlantationDrive, alt: "Plantation drive initiative" },
   { src: focusHealth, alt: "Health camp" },
+  { src: galleryCovidAwareness, alt: "COVID-19 awareness program" },
+  { src: galleryCommunityTalk, alt: "Community interaction session" },
   { src: focusEnvironment, alt: "Tree plantation" },
+  { src: galleryVolunteers, alt: "Foundation volunteers" },
+  { src: galleryYouthGroup, alt: "Youth group activities" },
   { src: focusAwareness, alt: "Community awareness" },
   { src: heroEnvironment, alt: "Environmental initiative" },
 ];
@@ -42,7 +62,7 @@ const GalleryPage = () => {
 
         <section className="section-padding">
           <div className="container-wide">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {images.map((image, index) => (
                 <ScrollReveal key={index} delay={index * 50}>
                   <div className="relative overflow-hidden rounded-xl group aspect-[4/3]">
