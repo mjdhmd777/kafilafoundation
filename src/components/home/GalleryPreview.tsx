@@ -1,18 +1,20 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import galleryCricketTrophy from "@/assets/gallery-cricket-trophy.jpg";
 import galleryDrugFreeRally from "@/assets/gallery-drug-free-rally.jpg";
 import galleryStudentsSession from "@/assets/gallery-students-session.jpg";
-import galleryPlantationDrive from "@/assets/gallery-plantation-drive.jpg";
-import galleryPrizeCeremony from "@/assets/gallery-prize-ceremony.jpg";
-import galleryYouthCricket from "@/assets/gallery-youth-cricket.jpg";
+import galleryOutdoorClass from "@/assets/gallery-outdoor-class.jpg";
+import galleryUmeedKiKiran from "@/assets/gallery-umeed-ki-kiran.jpg";
+import galleryCricketBanner from "@/assets/gallery-cricket-banner.jpg";
 
 const images = [
   { src: galleryDrugFreeRally, alt: "Drug free Kashmir awareness rally" },
   { src: galleryCricketTrophy, alt: "Cricket tournament trophy ceremony" },
   { src: galleryStudentsSession, alt: "Addressing students at Tangdhar & Titwal" },
-  { src: galleryPlantationDrive, alt: "Plantation drive initiative" },
-  { src: galleryPrizeCeremony, alt: "Prize distribution ceremony" },
-  { src: galleryYouthCricket, alt: "Youth cricket team" },
+  { src: galleryOutdoorClass, alt: "Outdoor classroom session" },
+  { src: galleryUmeedKiKiran, alt: "Umeed Ki Kiran program" },
+  { src: galleryCricketBanner, alt: "Cricket tournament with Kafila Foundation" },
 ];
 
 export function GalleryPreview() {
@@ -37,7 +39,7 @@ export function GalleryPreview() {
           {images.map((image, index) => (
             <ScrollReveal key={index} delay={index * 75}>
               <div 
-                className={`relative overflow-hidden rounded-2xl group ${
+                className={`relative overflow-hidden rounded-2xl group shadow-md hover:shadow-xl transition-shadow ${
                   index === 0 ? "md:col-span-2 md:row-span-2" : ""
                 }`}
               >
@@ -49,10 +51,25 @@ export function GalleryPreview() {
                   }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-0 left-0 right-0 p-3 text-primary-foreground opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="text-sm font-medium">{image.alt}</p>
+                </div>
               </div>
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal>
+          <div className="text-center mt-10">
+            <Link 
+              to="/gallery" 
+              className="inline-flex items-center gap-2 text-primary hover:underline font-semibold text-lg"
+            >
+              View Full Gallery
+              <ArrowRight className="h-5 w-5" />
+            </Link>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

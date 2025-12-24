@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { 
   Facebook, 
-  Twitter, 
   Instagram, 
   Youtube, 
   Linkedin, 
@@ -14,6 +13,7 @@ import logo from "@/assets/kafila-logo.png";
 
 const quickLinks = [
   { name: "About Us", href: "/about" },
+  { name: "Vision", href: "/about#vision" },
   { name: "Our Projects", href: "/projects" },
   { name: "Get Involved", href: "/get-involved" },
   { name: "Gallery", href: "/gallery" },
@@ -29,7 +29,11 @@ const legalLinks = [
 
 const socialLinks = [
   { name: "Facebook", href: "https://facebook.com/kafilafoundation", icon: Facebook },
-  { name: "Twitter", href: "https://twitter.com/kafilafoundation", icon: Twitter },
+  { name: "X", href: "https://x.com/kafilafoundation", icon: () => (
+    <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  )},
   { name: "Instagram", href: "https://instagram.com/kafilafoundation", icon: Instagram },
   { name: "YouTube", href: "https://youtube.com/kafilafoundation", icon: Youtube },
   { name: "LinkedIn", href: "https://linkedin.com/company/kafilafoundation", icon: Linkedin },
@@ -119,7 +123,7 @@ export function Footer() {
                   className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
                   aria-label={social.name}
                 >
-                  <social.icon className="h-5 w-5" />
+                  <social.icon />
                 </a>
               ))}
             </div>
