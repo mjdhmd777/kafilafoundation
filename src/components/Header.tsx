@@ -88,20 +88,20 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-1">
           {navigation.map((item) => (
             <div
               key={item.name}
-              className="relative"
+              className="relative group"
               onMouseEnter={() => item.children && setOpenDropdown(item.name)}
               onMouseLeave={() => setOpenDropdown(null)}
             >
               <Link
                 to={item.href}
                 className={cn(
-                  "px-4 py-2 text-sm font-medium rounded-lg transition-colors inline-flex items-center gap-1",
+                  "px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1",
                   location.pathname === item.href
-                    ? "text-primary bg-primary/5"
+                    ? "text-primary bg-primary/10"
                     : isScrolled
                     ? "text-foreground hover:text-primary hover:bg-primary/5"
                     : "text-foreground hover:text-primary hover:bg-primary/5"
@@ -109,19 +109,22 @@ export function Header() {
               >
                 {item.name}
                 {item.children && (
-                  <ChevronDown className="h-4 w-4 transition-transform" />
+                  <ChevronDown className={cn(
+                    "h-3.5 w-3.5 transition-transform duration-200",
+                    openDropdown === item.name && "rotate-180"
+                  )} />
                 )}
               </Link>
 
               {/* Dropdown */}
               {item.children && openDropdown === item.name && (
-                <div className="absolute top-full left-0 pt-2 animate-fade-in">
-                  <div className="bg-background rounded-xl shadow-xl border p-2 min-w-[200px]">
+                <div className="absolute top-full left-0 pt-2 z-50 animate-fade-in">
+                  <div className="bg-background rounded-xl shadow-xl border border-border/50 p-2 min-w-[220px] backdrop-blur-sm">
                     {item.children.map((child) => (
                       <Link
                         key={child.name}
                         to={child.href}
-                        className="block px-4 py-2 text-sm rounded-lg hover:bg-secondary transition-colors"
+                        className="block px-4 py-2.5 text-sm rounded-lg hover:bg-primary/10 hover:text-primary transition-all duration-200"
                       >
                         {child.name}
                       </Link>
@@ -134,7 +137,7 @@ export function Header() {
         </div>
 
         {/* CTA Buttons */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-3">
           <Button variant="donate" size="default" asChild>
             <Link to="/donate">
               <Heart className="h-4 w-4" />
@@ -145,7 +148,7 @@ export function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden p-2 rounded-lg hover:bg-primary/5 transition-colors"
+          className="md:hidden p-2 rounded-lg hover:bg-primary/5 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
@@ -158,7 +161,7 @@ export function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-background border-t animate-slide-in-left">
+        <div className="md:hidden bg-background border-t animate-slide-in-left">
           <div className="container-wide py-4 space-y-2">
             {navigation.map((item) => (
               <div key={item.name}>
