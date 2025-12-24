@@ -56,14 +56,14 @@ const ContactPage = () => {
             <ScrollReveal>
               <div className="rounded-2xl overflow-hidden h-80">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d104543.16!2d74.2!3d34.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e1a6a6a6a6a6a7%3A0x0!2sKupwara%2C%20Jammu%20and%20Kashmir!5e0!3m2!1sen!2sin!4v1609459200000!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26338.89!2d74.1833!3d34.5667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e185c1a1a1a1a1%3A0x0!2sCherakote%2C%20Lolab%2C%20Kupwara%2C%20Kashmir!5e0!3m2!1sen!2sin!4v1609459200000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Kafila Foundation Location"
+                  title="Kafila Foundation - Cherakote, Lolab, District Kupwara, Kashmir"
                 />
               </div>
             </ScrollReveal>
